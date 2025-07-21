@@ -1,0 +1,14 @@
+<div class="chore-list">
+  <h2>Chore List</h2>
+
+  <ul *ngIf="chores.length > 0; else noChores">
+    <li *ngFor="let chore of chores">
+      <strong>{{ chore.title }}</strong> —
+      <em>{{ chore.status }}</em> (Due: {{ chore.dueDate }})
+    </li>
+  </ul>
+
+  <ng-template #noChores>
+    <p>No chores found.</p>
+  </ng-template>
+</div>

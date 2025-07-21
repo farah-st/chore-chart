@@ -1,0 +1,26 @@
+<div class="chore-edit">
+  <h2>Add New Chore</h2>
+  <form (ngSubmit)="onSubmit()" #choreForm="ngForm">
+    <label>
+      Title:
+      <input type="text" name="title" [(ngModel)]="newChore.title" required />
+    </label>
+
+    <label>
+      Due Date:
+      <input type="date" name="dueDate" [(ngModel)]="newChore.dueDate" required />
+    </label>
+
+    <label>
+      Status:
+      <select name="status" [(ngModel)]="newChore.status">
+        <option>To Do</option>
+        <option>In Progress</option>
+        <option>Done</option>
+      </select>
+    </label>
+
+    <button type="submit" [disabled]="choreForm.invalid">Add Chore</button>
+  </form>
+</div>
+
