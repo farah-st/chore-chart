@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; 
 import { ChoreService } from '../chore.service';
 import { Chore } from '../chore.model';
+
 
 @Component({
   selector: 'app-chore-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './chore-list.component.html'
 })
 export class ChoreListComponent implements OnInit {

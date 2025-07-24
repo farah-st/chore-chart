@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ChoreService } from '../chore.service';
 import { Chore } from '../chore.model';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-chore-edit',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './chore-edit.component.html'
 })
 export class ChoreEditComponent {

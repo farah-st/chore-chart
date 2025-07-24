@@ -8,7 +8,7 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ChoreService {
-  private baseUrl = 'http://localhost:3000/chores';
+  private baseUrl = '/chores';
   private chores: Chore[] = [];
   choreListChanged = new Subject<Chore[]>();
 

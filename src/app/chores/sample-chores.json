@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Do the dishes",
+    "status": "Incomplete",
+    "dueDate": "2025-07-23T18:00:00Z"
+  },
+  {
+    "title": "Vacuum the living room",
+    "status": "Incomplete",
+    "dueDate": "2025-07-24T16:00:00Z"
+  },
+  {
+    "title": "Take out trash",
+    "status": "Complete",
+    "dueDate": "2025-07-21T20:00:00Z"
+  },
+  {
+    "title": "Feed the dog",
+    "status": "Incomplete",
+    "dueDate": "2025-07-22T08:00:00Z"
+  },
+  {
+    "title": "Clean your room",
+    "status": "Incomplete",
+    "dueDate": "2025-07-25T10:00:00Z"
+  },
+  {
+    "title": "Read for 20 minutes",
+    "status": "Incomplete",
+    "dueDate": "2025-07-22T17:00:00Z"
+  },
+  {
+    "title": "Set the table",
+    "status": "Complete",
+    "dueDate": "2025-07-20T18:30:00Z"
+  },
+  {
+    "title": "Water the plants",
+    "status": "Incomplete",
+    "dueDate": "2025-07-26T11:00:00Z"
+  },
+  {
+    "title": "Fold laundry",
+    "status": "Incomplete",   
+    "dueDate": "2025-07-23T13:00:00Z"
+  },
+  {
+    "title": "Sweep the kitchen",
+    "status": "Complete",
+    "dueDate": "2025-07-21T09:00:00Z"
+  }
+]
