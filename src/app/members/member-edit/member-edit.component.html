@@ -1,1 +1,51 @@
-<p>member-edit works!</p>
+<div class="member-edit-container">
+  <div class="form-card">
+    <h2>{{ isEditMode ? 'Edit Member' : 'Add Member' }}</h2>
+
+    <form #memberForm="ngForm" (ngSubmit)="onSubmit(memberForm)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          [(ngModel)]="member.name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input
+          id="age"
+          type="number"
+          name="age"
+          [(ngModel)]="member.age"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          [(ngModel)]="member.email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select id="role" name="role" [(ngModel)]="member.role">
+          <option value="parent">Parent</option>
+          <option value="child">Child</option>
+        </select>
+      </div>
+
+      <button type="submit" [disabled]="memberForm.invalid">
+        {{ isEditMode ? 'Update Member' : 'Add Member' }}
+      </button>
+    </form>
+  </div>
+</div>

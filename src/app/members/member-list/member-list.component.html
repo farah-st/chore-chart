@@ -1,1 +1,23 @@
-<p>member-list works!</p>
+<div class="member-list-container">
+  <h2>Family Members</h2>
+
+  <div *ngIf="members.length > 0; else noMembers" class="card-grid">
+    <div class="member-card" *ngFor="let member of members">
+      <h3>{{ member.name }}</h3>
+      <p><strong>Age:</strong> {{ member.age }}</p>
+      <p *ngIf="member.email"><strong>Email:</strong> {{ member.email }}</p>
+      <p *ngIf="member.role"><strong>Role:</strong> {{ member.role }}</p>
+
+      <div class="actions">
+        <a [routerLink]="['/members', member._id, 'edit']">Edit</a>
+        <button (click)="onDeleteMember(member._id)" [disabled]="!member._id">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noMembers>
+    <p>No members yet. Start by adding one!</p>
+  </ng-template>
+</div>
+
+
