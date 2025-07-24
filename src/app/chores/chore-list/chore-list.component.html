@@ -1,14 +1,30 @@
 <div class="chore-list">
   <h2>Chore List</h2>
 
-  <ul *ngIf="chores.length > 0; else noChores">
-    <li *ngFor="let chore of chores">
-      <strong>{{ chore.title }}</strong> —
-      <em>{{ chore.status }}</em> (Due: {{ chore.dueDate }})
-    </li>
-  </ul>
+  <table *ngIf="chores.length > 0; else noChores">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Due Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let chore of chores">
+        <td>{{ chore.title }}</td>
+        <td>{{ chore.status }}</td>
+        <td>{{ chore.dueDate | date: 'mediumDate' }}</td>
+        <td>
+          <a [routerLink]="['/chore-edit', chore._id]" class="edit-button">Edit</a>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
   <ng-template #noChores>
     <p>No chores found.</p>
   </ng-template>
 </div>
+

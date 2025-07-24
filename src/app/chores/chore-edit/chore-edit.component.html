@@ -1,5 +1,6 @@
 <div class="chore-edit">
-  <h2>Add New Chore</h2>
+  <h2>{{ isEditMode ? 'Edit Chore' : 'Add New Chore' }}</h2>
+
   <form (ngSubmit)="onSubmit()" #choreForm="ngForm">
     <label>
       Title:
@@ -20,7 +21,10 @@
       </select>
     </label>
 
-    <button type="submit" [disabled]="choreForm.invalid">Add Chore</button>
+    <button type="submit" [disabled]="choreForm.invalid">
+      {{ isEditMode ? 'Update Chore' : 'Add Chore' }}
+    </button>
   </form>
 </div>
+
 
